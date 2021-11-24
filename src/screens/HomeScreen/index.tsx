@@ -1,12 +1,16 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
 import ProductItem from '../../components/ProductItem';
 import products from '../../data/products';
 
 const HomeScreen = () => {
   return (
     <View style={styles.page}>
-        <ProductItem item ={products[0]}/>
+        {/* Render Product Componet */}
+        <FlatList
+           data={products}
+           renderItem={({item}) => <ProductItem item={item}/>}
+        />
     </View>
   );
 };
