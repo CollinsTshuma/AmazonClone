@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import product from '../../data/product';
 import QuantitySelector from '../../components/QuantitySelector';
+import Button from '../../components/Button';
 import {Picker} from '@react-native-picker/picker'
 
 const ProductScreen = () => {
@@ -40,6 +41,19 @@ const ProductScreen = () => {
       {/*Quantity Selector */}
       <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
       {/*Button */}
+      <Button
+        text={'Add To Cart'}
+        onPress={() => {
+          console.warn('Add to cart');
+        }}
+        containerStyles={{backgroundColor: '#e3c905'}}
+      />
+      <Button
+        text={'Buy Now'}
+        onPress={() => {
+          console.warn('Buy now');
+        }}
+      />
     </View>
   );
 };
