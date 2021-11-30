@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import product from '../../data/product';
 import QuantitySelector from '../../components/QuantitySelector';
+import ImageCarousel from '../../components/ImageCarousel';
 import Button from '../../components/Button';
 import {Picker} from '@react-native-picker/picker'
 
@@ -16,7 +17,9 @@ const ProductScreen = () => {
   return (
     <View>
       <Text style={styles.title}>{product.title}</Text>
+
       {/*Image Corousel */}
+      <ImageCarousel images = {product.images} />
 
       {/*Option Selector */}
       <Picker
